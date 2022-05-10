@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+$black : #191919;
+$white : #ffffff;
+$darkblue : #68A7AD;
+$yellow: #FCC915;
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+a, button {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    flex-wrap: wrap;
+    background-color: $darkblue;
+    
+    a {
+        color: $white;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menu_hamburger{
+
+        ion-icon{
+            font-size: 35px;
+        }
+    }
+
+    nav{
+        display: none;
+        width: 100%;
+
+        ul{
+            list-style-type: none;
+        }
+
+        &.active{
+            display: initial;
+        }
+    }
+
+}
+
+main {
+   .hero_container {
+       width: 100%;
+       height: 30vh;
+       position: relative;
+
+       img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+        }
+        
+        .text_container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: $white;
+            border-radius: 10px;
+            text-align: center;
+            h2{
+                font-size: 35px;
+                font-weight: 500;
+            }
+        }
+   }
+   .explore_about {
+       padding: 35px 30px;
+
+       h3{
+              font-size: 30px;
+              font-weight: 600;
+              color: $darkblue;
+              margin-bottom: 35px;
+       }
+       .items_container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 35px;
+
+            .item {
+                width: 100%;
+                border-radius: 10px;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                
+                img {
+                    width: 100%;
+                    height: 400px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+            
+            .text_item {
+                padding: 25px 30px;
+
+                h4 {
+                    font-size: 22px;
+
+                  .rating{
+                    margin-left: 20px;
+                    
+                    ion-icon{
+                        font-size: 40px;
+                        color: $yellow;
+                    }
+
+                    span{
+                        font-weight: 400;
+                    }
+
+                  }
+                }
+
+                .location{
+                    font-size: 15px;
+                    margin-top: 20px;
+                    margin-bottom: 30px;
+
+                    ion-icon{
+                        font-size: 35px;
+                    }
+                }
+
+                .deskripsi{
+                    font-size: 18px;
+                }
+            }
+       }
+   }
+}
+
+footer {
+    padding: 30px 30px;
+    background-color: $darkblue;
+    font-size: 16px;
+    color: $white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        background-color: $black;
+    }
+}
