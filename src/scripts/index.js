@@ -12,11 +12,11 @@ const items_container = document.querySelector(".items_container");
 
 data.restaurants.forEach((restaurant) => {
   const description =
-    restaurant.description.slice(0, 250) +
-    (restaurant.description.length > 250 ? "..." : "");
+    restaurant.description.slice(0, 350) +
+    (restaurant.description.length > 350 ? "..." : "");
   items_container.innerHTML += ` 
-    <div class="item">
-        <img src="${restaurant.pictureId}" alt="" />
+    <a href="#" class="item">
+        <img src="${restaurant.pictureId}" alt="${restaurant.name}" />
         <div class="text_item">
         <h4>
            ${restaurant.name}
@@ -33,5 +33,5 @@ data.restaurants.forEach((restaurant) => {
            ${description}
         </p>
         </div>
-    </div>`;
+    </a>`;
 });
