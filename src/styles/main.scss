@@ -73,6 +73,7 @@ header {
 
         &:hover{
             color: $yellow;
+            transform: scale(1.05);
         }
 
         &.active{
